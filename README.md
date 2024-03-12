@@ -1,5 +1,11 @@
 MAVROS
 ======
+
+MADE A MODIFICATION IN ORDER TO MAKE LANDING TARGET PLUGIN WORKING WITH ARDUPILOT:
+/home/dcs_user/workspaces/ros2_ws/src/mavros/mavros_extras/src/plugins/landing_target.cpp
+    lt.position_valid = position_valid *0; // FORCED TO BE 0 FOR ARDUPILOT RAW MESSAGE, IF 1 ARDUPILOT IGNORES IT.
+
+
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mavlink/mavros)](https://github.com/mavlink/mavros/releases)  [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mavlink/mavros?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  [![CI](https://github.com/mavlink/mavros/actions/workflows/main.yml/badge.svg)](https://github.com/mavlink/mavros/actions/workflows/main.yml)
 
 MAVLink extendable communication node for ROS.

@@ -200,19 +200,19 @@
 # landing_target
 /mavros/**/landing_target:
   ros__parameters:
-    listen_lt: false
-    mav_frame: "LOCAL_NED"
-    land_target_type: "VISION_FIDUCIAL"
-    image.width: 640            # [pixels]
-    image.height: 480
-    camera.fov_x: 2.0071286398   # default: 115 [degrees]
-    camera.fov_y: 2.0071286398
-    tf.send: true
-    tf.listen: false
-    tf.frame_id: "landing_target"
-    tf.child_frame_id: "camera_center"
-    tf.rate_limit: 10.0
-    target_size: {x:  0.3, y:  0.3}
+    listen_lt: true                     # set to true far raw landing target message
+    mav_frame: "LOCAL_NED"              # not usefull for raw landing target message
+    land_target_type: "VISION_FIDUCIAL" # not usefull for raw landing target message
+    image.width: 640                    # [pixels] # not usefull for raw landing target message
+    image.height: 480                   # not usefull for raw landing target message
+    camera.fov_x: 2.0071286398          # default: 115 [degrees] # not usefull for raw landing target message
+    camera.fov_y: 2.0071286398          # not usefull for raw landing target message
+    tf.send: true                       # not usefull for raw landing target message
+    tf.listen: false                    # set to false far raw landing target message
+    tf.frame_id: "landing_target"       # not usefull for raw landing target message
+    tf.child_frame_id: "camera_center"  # not usefull for raw landing target message
+    tf.rate_limit: 10.0                 # not usefull for raw landing target message
+    target_size: {x:  0.3, y:  0.3}     # not usefull for raw landing target message
 
 # mocap_pose_estimate
 /mavros/**/mocap:

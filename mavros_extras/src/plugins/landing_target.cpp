@@ -246,7 +246,7 @@ private:
     lt.frame = frame;
     lt.distance = distance;
     lt.type = type;
-    lt.position_valid = position_valid;
+    lt.position_valid = position_valid *0; // FORCED TO BE 0 FOR ARDUPILOT RAW MESSAGE, IF 1 ARDUPILOT IGNORES IT.
     lt.angle_x = angle.x();
     lt.angle_y = angle.y();
     lt.size_x = size.x();
